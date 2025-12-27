@@ -17,13 +17,13 @@ To test an odd integer $n>3$:
 
 Find $r$ and $d$ such that $n−1=2^r⋅d$ (where d is odd).
 
-Choose a random witness a in the range [2,n−2].
+Choose a random witness $a$ in the range [2,n−2].
 
 Compute $x=a^d(modn)$.
 
 If $x=1$ or $x=n−1$, $n$ is a "probable prime."
 
- Otherwise, square $x$ repeatedly ($r−1 $ times). If $x$ ever becomes $n−1$, $n$ is a "probable prime."
+ Otherwise, square $x$ repeatedly ($r−1$ times). If $x$ ever becomes $n−1$, $n$ is a "probable prime."
 
 If neither condition is met, $n$ is composite.
 
