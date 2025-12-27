@@ -1,4 +1,4 @@
-###Miller-Rabin Primality Test Implementation
+#Miller-Rabin Primality Test Implementation
 ##Project Overview
 
 This repository contains a Python implementation of the Miller-Rabin primality test. As a Master of Mathematics, I developed this project to demonstrate the practical application of number theory in modern cryptography. This algorithm is a cornerstone of public-key cryptography, used globally to generate the large prime numbers required for RSA and Elliptic Curve Cryptography (ECC).
