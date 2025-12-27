@@ -1,30 +1,43 @@
-Optimized Miller-Rabin Primality Test
-📌 Project Overview
+Miller-Rabin Primality Test Implementation
+Project Overview
 
-This repository contains a high-performance implementation of the Miller-Rabin Primality Test, a probabilistic algorithm essential for modern cryptography. As a Mathematician transitioning into Cybersecurity, I developed this tool to demonstrate how advanced number theory is applied to secure digital communications, specifically in the generation of large primes for RSA and ECC (Elliptic Curve Cryptography).
-🧪 Mathematical Context
+This repository contains a Python implementation of the Miller-Rabin primality test. As a Master of Mathematics, I developed this project to demonstrate the practical application of number theory in modern cryptography. This algorithm is a cornerstone of public-key cryptography, used globally to generate the large prime numbers required for RSA and Elliptic Curve Cryptography (ECC).
+The Mathematics
 
-The Miller-Rabin test is based on Fermat's Little Theorem and the property of square roots of unity in a finite field.
+The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
 
-Given an odd integer n>3, we write n−1 as 2r⋅d, where d is odd. For a base a:
+    Fermat's Little Theorem: If p is prime, then for any integer a, ap−1≡1(modp).
 
-    If ad≡1(modn), n is a probable prime.
+    Square Roots of Unity: In a field Zp​, the only solutions to x2≡1(modp) are x≡1 and x≡−1.
 
-    If a2s⋅d≡−1(modn) for some 0≤s<r, n is a probable prime.
+Algorithm Logic
 
-If neither holds, n is definitely composite. This implementation uses Modular Exponentiation to ensure O(klog3n) complexity, making it suitable for 2048-bit integer analysis.
-🚀 Key Features
+To test an odd integer n>3:
 
-    Probabilistic Accuracy: Configurable accuracy through parameter k (default 40 trials), reducing the probability of error to less than 4−k.
+    Find r and d such that n−1=2r⋅d (where d is odd).
 
-    Optimized Performance: Utilizes Python's pow(a, d, n) for efficient binary exponentiation.
+    Choose a random witness a in the range [2,n−2].
 
-    Witness Discovery: Identifies composite numbers that fool the standard Fermat primality test (Carmichael numbers).
+    Compute x=ad(modn).
 
-🛠️ Installation & Usage
-Prerequisites
+    If x=1 or x=n−1, n is a "probable prime."
 
-    Python 3.8 or higher
+    Otherwise, square x repeatedly (r−1 times). If x ever becomes n−1, n is a "probable prime."
 
-Cloning the Repository
+    If neither condition is met, n is composite.
+
+Technical Features
+
+    Efficiency: Uses Python's internal pow(a, d, n) for modular exponentiation, ensuring O(klog3n) time complexity.
+
+    Accuracy: By performing k independent trials, the probability of a composite number being identified as prime is less than 4−k. With the default k=40, the error margin is negligible.
+
+    Robustness: Designed to identify Carmichael numbers (composite numbers that pass the standard Fermat primality test).
+
+Installation and Usage
+Requirements
+
+    Python 3.x
+
+Setup
 Bash
