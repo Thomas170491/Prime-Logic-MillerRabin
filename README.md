@@ -29,11 +29,11 @@ If neither condition is met, $n$ is composite.
 
 ## Technical Features
 
-    Efficiency: Uses Python's internal pow(a, d, n) for modular exponentiation, ensuring $O(klog^3n)$ time complexity.
+Efficiency: Uses Python's internal pow(a, d, n) for modular exponentiation, ensuring $O(klog^3n)$ time complexity.
 
-    Accuracy: By performing $k$ independent trials, the probability of a composite number being identified as prime is less than $4^{−k}$. With the default $k=40$, the error margin is negligible.
+Accuracy: By performing $k$ independent trials, the probability of a composite number being identified as prime is less than $4^{−k}$. With the default $k=40$, the error margin is negligible.
 
-    Robustness: Designed to identify Carmichael numbers (composite numbers that pass the standard Fermat primality test).
+Robustness: Designed to identify Carmichael numbers (composite numbers that pass the standard Fermat primality test).
 
 ## Installation and Usage
 
