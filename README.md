@@ -5,11 +5,12 @@
 This repository contains a Python implementation of the Miller-Rabin primality test. As a Master of Mathematics, I developed this project to demonstrate the practical application of number theory in modern cryptography. This algorithm is a cornerstone of public-key cryptography, used globally to generate the large prime numbers required for RSA and Elliptic Curve Cryptography (ECC).
 The Mathematics
 
-## The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
+The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
 
-    Fermat's Little Theorem: If p is prime, then for any integer a, ap−1≡1(modp).
+    Fermat's Little Theorem: If p is prime, then for any integer a, $a^{p−1}≡1(modp)$
+    .
 
-    Square Roots of Unity: In a field Zp​, the only solutions to x2≡1(modp) are x≡1 and x≡−1.
+    Square Roots of Unity: In a field Zp​, the only solutions to $x²≡1(modp)$ are $x≡1$ and $x≡−1$.
 
 ## Algorithm Logic
 
