@@ -60,7 +60,7 @@ print(f"Is {prime_candidate} prime? {result}")
 
 ## Benchmarking
 
-Unlike trial division, which has a complexity of $O(n​)$, the Miller-Rabin test scales logarithmically with the size of the input. This allows for the verification of primes with hundreds or thousands of digits, a requirement for secure cryptographic key generation.
+Unlike trial division, which has a complexity of $O(n)$, the Miller-Rabin test scales logarithmically with the size of the input. This allows for the verification of primes with hundreds or thousands of digits, a requirement for secure cryptographic key generation.
 
 ## Author
 
@@ -74,5 +74,4 @@ This project is open-source and available under the MIT License.
 
 
 
-Setup
-Bash
+
