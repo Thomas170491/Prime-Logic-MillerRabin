@@ -1,16 +1,17 @@
-#Miller-Rabin Primality Test Implementation
-##Project Overview
+# Miller-Rabin Primality Test Implementation
+
+## Project Overview
 
 This repository contains a Python implementation of the Miller-Rabin primality test. As a Master of Mathematics, I developed this project to demonstrate the practical application of number theory in modern cryptography. This algorithm is a cornerstone of public-key cryptography, used globally to generate the large prime numbers required for RSA and Elliptic Curve Cryptography (ECC).
 The Mathematics
 
-The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
+## The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
 
     Fermat's Little Theorem: If p is prime, then for any integer a, ap−1≡1(modp).
 
     Square Roots of Unity: In a field Zp​, the only solutions to x2≡1(modp) are x≡1 and x≡−1.
 
-##Algorithm Logic
+## Algorithm Logic
 
 To test an odd integer n>3:
 
@@ -26,7 +27,7 @@ To test an odd integer n>3:
 
     If neither condition is met, n is composite.
 
-##Technical Features
+# Technical Features
 
     Efficiency: Uses Python's internal pow(a, d, n) for modular exponentiation, ensuring O(klog3n) time complexity.
 
@@ -34,17 +35,18 @@ To test an odd integer n>3:
 
     Robustness: Designed to identify Carmichael numbers (composite numbers that pass the standard Fermat primality test).
 
-##Installation and Usage
+# Installation and Usage
+
 Requirements
 
     Python 3.x
 
-Setup
+# Setup
 
 git clone git@github.com:Thomas170491/Prime-Logic-MillerRabin.git
 cd Prime-Logic-MillerRabin
 
-Basic Example
+# Basic Example
 
 from miller_rabin import is_prime_miller_rabin
 
