@@ -7,15 +7,15 @@ The Mathematics
 
 The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
 
-    Fermat's Little Theorem: If p is prime, then for any integer a, ap−1≡1(modp).
+Fermat's Little Theorem: If p is prime, then for any integer a, a^p−1≡1(modp).
 
-    Square Roots of Unity: In a field Zp​, the only solutions to x2≡1(modp) are x≡1 and x≡−1.
+Square Roots of Unity: In a field Zp​, the only solutions to x^2≡1(modp) are x≡1 and x≡−1.
 
 ## Algorithm Logic
 
 To test an odd integer n>3:
 
-    Find r and d such that n−1=2r⋅d (where d is odd).
+    Find r and d such that n−1=2^r⋅d (where d is odd).
 
     Choose a random witness a in the range [2,n−2].
 
