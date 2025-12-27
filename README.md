@@ -9,7 +9,7 @@ The Miller-Rabin test is a probabilistic primality test based on the properties 
 
 Fermat's Little Theorem: If $p$ is prime, then for any integer $a$, $a^p−1≡1(modp)$.
 
-Square Roots of Unity: In a field $Z_p$​, the only solutions to $x^2≡1(modp)$ are $x≡1$ and $x≡−1$.
+Square Roots of Unity: In a field $Z_p$​, the only solutions to $x^2≡1(modp)$ are $x≡1(mod p)$ and $x≡−1(modp)$.
 
 ## Algorithm Logic
 
