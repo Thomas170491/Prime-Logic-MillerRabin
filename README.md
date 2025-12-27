@@ -7,10 +7,9 @@ The Mathematics
 
 The Miller-Rabin test is a probabilistic primality test based on the properties of strong pseudoprimes. It relies on two main mathematical pillars:
 
-    Fermat's Little Theorem: If p is prime, then for any integer a, $a^{p−1}≡1(modp)$
-    .
+    Fermat's Little Theorem: If p is prime, then for any integer a, ap−1≡1(modp).
 
-    Square Roots of Unity: In a field Zp​, the only solutions to $x²≡1(modp)$ are $x≡1$ and $x≡−1$.
+    Square Roots of Unity: In a field Zp​, the only solutions to x2≡1(modp) are x≡1 and x≡−1.
 
 ## Algorithm Logic
 
@@ -38,16 +37,18 @@ To test an odd integer n>3:
 
 ## Installation and Usage
 
-Requirements
+### Requirements
 
     Python 3.x
 
-## Setup
+### Setup
+
 
 git clone git@github.com:Thomas170491/Prime-Logic-MillerRabin.git
 cd Prime-Logic-MillerRabin
 
-## Basic Example
+Basic Example
+Python
 
 from miller_rabin import is_prime_miller_rabin
 
@@ -55,6 +56,7 @@ from miller_rabin import is_prime_miller_rabin
 
 prime_candidate = 104729
 result = is_prime_miller_rabin(prime_candidate)
+print(f"Is {prime_candidate} prime? {result}")
 
 ## Benchmarking
 
@@ -62,10 +64,15 @@ Unlike trial division, which has a complexity of O(n​), the Miller-Rabin test 
 
 ## Author
 
-Thomas Papas MSc in Mathematics (University of Geneva) Certified Python Software Engineer
+Thomas Papas MSc in Mathematics (University of Geneva)
+
+Certified Python Software Engineer
 
 ## License
 
 This project is open-source and available under the MIT License.
 
-print(f"Is {prime_candidate} prime? {result}")
+
+
+Setup
+Bash
