@@ -13,25 +13,25 @@ Square Roots of Unity: In a field $Z_p$​, the only solutions to $x^2≡1(modp)
 
 ## Algorithm Logic
 
-To test an odd integer n>3:
+To test an odd integer $n>3$:
 
-    Find r and d such that n−1=2^r⋅d (where d is odd).
+Find $r$ and $d$ such that $n−1=2^r⋅d$ (where d is odd).
 
-    Choose a random witness a in the range [2,n−2].
+Choose a random witness a in the range [2,n−2].
 
-    Compute x=ad(modn).
+Compute $x=a^d(modn)$.
 
-    If x=1 or x=n−1, n is a "probable prime."
+If $x=1$ or $x=n−1$, $n$ is a "probable prime."
 
-    Otherwise, square x repeatedly (r−1 times). If x ever becomes n−1, n is a "probable prime."
+ Otherwise, square $x$ repeatedly ($r−1 $ times). If $x$ ever becomes $n−1$, $n$ is a "probable prime."
 
-    If neither condition is met, n is composite.
+If neither condition is met, $n$ is composite.
 
 ## Technical Features
 
-    Efficiency: Uses Python's internal pow(a, d, n) for modular exponentiation, ensuring O(klog3n) time complexity.
+    Efficiency: Uses Python's internal pow(a, d, n) for modular exponentiation, ensuring $O(klog^3n)$ time complexity.
 
-    Accuracy: By performing k independent trials, the probability of a composite number being identified as prime is less than 4−k. With the default k=40, the error margin is negligible.
+    Accuracy: By performing $k$ independent trials, the probability of a composite number being identified as prime is less than $4^{−k}$. With the default $k=40$, the error margin is negligible.
 
     Robustness: Designed to identify Carmichael numbers (composite numbers that pass the standard Fermat primality test).
 
@@ -47,12 +47,12 @@ To test an odd integer n>3:
 git clone git@github.com:Thomas170491/Prime-Logic-MillerRabin.git
 cd Prime-Logic-MillerRabin
 
-Basic Example
-Python
+### Basic Example
+
 
 from miller_rabin import is_prime_miller_rabin
 
-## Test a known large prime
+### Test a known large prime
 
 prime_candidate = 104729
 result = is_prime_miller_rabin(prime_candidate)
@@ -60,7 +60,7 @@ print(f"Is {prime_candidate} prime? {result}")
 
 ## Benchmarking
 
-Unlike trial division, which has a complexity of O(n​), the Miller-Rabin test scales logarithmically with the size of the input. This allows for the verification of primes with hundreds or thousands of digits, a requirement for secure cryptographic key generation.
+Unlike trial division, which has a complexity of $O(n​)$, the Miller-Rabin test scales logarithmically with the size of the input. This allows for the verification of primes with hundreds or thousands of digits, a requirement for secure cryptographic key generation.
 
 ## Author
 
